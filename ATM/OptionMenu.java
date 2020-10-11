@@ -39,6 +39,15 @@ public class OptionMenu extends Account {
              getAccountType();
          }else
          System.out.println("\n" + "Wrong Customer Number or Pin Number" + "\n");
+      System.out.println("\n" + " If you Don't have Account please Create Account!" + "\n");
+		System.out.println("Enter your customer Number ");
+		int cst_no=acc.nextInt();
+		System.out.println("Enter PIN to be register");
+		int pin=acc.nextInt();
+		data.put(cst_no,pin);
+		System.out.println("Your New Account has been Successfuly Registered! ");
+		System.out.println("Redirecting to login.............");
+		getLogin();
     }while(x==1);
   }
 
