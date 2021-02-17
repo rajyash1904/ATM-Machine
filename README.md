@@ -9,4 +9,4 @@ To run the project\
 5. run command : javac ATM.java\
 6. After completion your folder will contain 3 .class files\
 7. In command prompt run command: java ATM\
-8. Project will start running.
+8. Project will start running
