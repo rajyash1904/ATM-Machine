@@ -10,7 +10,8 @@ public class OptionMenu {
 	Scanner menuInput = new Scanner(System.in);
 	DecimalFormat moneyFormat = new DecimalFormat("'$'###,##0.00");
 	HashMap<Integer, Account> data = new HashMap<Integer, Account>();
-
+        String cst_name = "";
+        
 	public void getLogin() throws IOException {
 		boolean end = false;
 		int customerNumber = 0;
@@ -156,7 +157,7 @@ public class OptionMenu {
 		boolean end = false;
 		while (!end) {
 			try {
-				System.out.println("\nEnter your customer number ");
+				System.out.println("\nEnter your customer number: ");
 				cst_no = menuInput.nextInt();
 				Iterator it = data.entrySet().iterator();
 				while (it.hasNext()) {
@@ -173,9 +174,12 @@ public class OptionMenu {
 				menuInput.next();
 			}
 		}
+                
+                System.out.println("\nEnter your customer name: ");
+                cst_name = menuInput.next();
 		System.out.println("\nEnter PIN to be registered");
 		int pin = menuInput.nextInt();
-		data.put(cst_no, new Account(cst_no, pin));
+		data.put(cst_no, new Account(cst_no, pin, cst_name));
 		System.out.println("\nYour new account has been successfuly registered!");
 		System.out.println("\nRedirecting to login.............");
 		getLogin();
@@ -208,7 +212,7 @@ public class OptionMenu {
 				menuInput.next();
 			}
 		}
-		System.out.println("\nThank You for using this ATM.\n");
+		System.out.println("\nThank You Mr " + cst_name + " for using this ATM.\n");
 		menuInput.close();
 		System.exit(0);
 	}

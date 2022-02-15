@@ -9,6 +9,7 @@ public class ATM {
 	}
 
 	public static void introduction() {
+                String cst_name = "";
 		System.out.println("Welcome to the ATM Project!");
 	}
 }
