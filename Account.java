@@ -6,6 +6,7 @@ public class Account {
 	// variables
 	private int customerNumber;
 	private int pinNumber;
+        private String customerName;
 	private double checkingBalance = 0;
 	private double savingBalance = 0;
 
@@ -15,9 +16,10 @@ public class Account {
 	public Account() {
 	}
 
-	public Account(int customerNumber, int pinNumber) {
+	public Account(int customerNumber, int pinNumber, String customerName) {
 		this.customerNumber = customerNumber;
 		this.pinNumber = pinNumber;
+                this.customerName = customerName;
 	}
 
 	public Account(int customerNumber, int pinNumber, double checkingBalance, double savingBalance) {
@@ -44,6 +46,15 @@ public class Account {
 	public int getPinNumber() {
 		return pinNumber;
 	}
+        
+        public String setCustomerName(String customerNumber){
+            this.customerName = customerName;
+            return customerNumber;
+        }
+        
+        public String getCustomerName(){
+            return customerName;
+        }
 
 	public double getCheckingBalance() {
 		return checkingBalance;
