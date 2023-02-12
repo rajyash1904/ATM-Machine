@@ -27,15 +27,15 @@ To run the project:\
 7. In command prompt/terminal run command: java ATM\
 
 ---
-##Visual
+## Visual
 After running the command in #7, you should see this interface:\
 
 ![ATMinterface](https://user-images.githubusercontent.com/77065772/218245894-caabfd9b-3fa4-4833-81ba-07a2eadaf648.PNG)
 
 ---
-#For Developers
+# For Developers
 
-##Contribution Guidelines
+## Contribution Guidelines
 
 ### Working on Issues
 
