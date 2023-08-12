@@ -16,6 +16,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
+          distribution: 'temurin'
           java-version: '18'  # Specify the version you want, e.g., '18' or '1.8'
 
       - name: Compile Java code
