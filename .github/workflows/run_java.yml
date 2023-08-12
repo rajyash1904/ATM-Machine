@@ -3,7 +3,7 @@ name: Compile Java with Java 18
 on:
   push:
     branches:
-      - '*'  # Adjust the branch name as needed
+      - '*'  # Trigger the workflow on any branch
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: 18
+          java-version: '18'  # Specify the version you want, e.g., '18' or '1.8'
 
       - name: Compile Java code
         run: javac -d bin ATM/*.java
