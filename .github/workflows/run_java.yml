@@ -1,0 +1,25 @@
+name: Compile Java with Java 18
+
+on:
+  push:
+    branches:
+      - '*'  # Trigger the workflow on any branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '18'  # Specify the version you want, e.g., '18' or '1.8'
+
+      - name: Compile Java code
+        run: javac -d bin ATM/*.java
+
+      # You can add additional steps here, such as testing or deploying your application
