@@ -1,1 +1,79 @@
-/bin/
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# IntelliJ IDEA project files
+.idea/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# Maven build directory
+target/
+
+# Gradle build directory
+build/
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Generated files
+target/
+bin/
+
+# Mac OS files
+.DS_Store
+
+# IntelliJ IDEA workspace
+*.iws
+
+# NetBeans build directory
+nbbuild/
+dist/
+nbdist/
+
+# Gradle cache
+.gradle/
+
+# Gradle wrapper properties
+gradle-wrapper.properties
+
+# IntelliJ IDEA temporary files
+*.iml
+
+# Eclipse metadata
+.metadata/
+
+# VSCode settings
+.vscode/
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Compiled binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Compiled object files
+*.o
+
+# Compiled dynamic libraries
+*.so
+*.dylib
+
+# Java Bytecode files
+*.class
+
+# JAR files used for libraries
+lib/*.jar
+
+# Compiled Webpack files
+dist/
