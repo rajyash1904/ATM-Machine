@@ -158,16 +158,13 @@ public class OptionMenu {
 			try {
 				System.out.println("\nEnter your customer number ");
 				cst_no = menuInput.nextInt();
-				Iterator it = data.entrySet().iterator();
-				while (it.hasNext()) {
-					Map.Entry pair = (Map.Entry) it.next();
-					if (!data.containsKey(cst_no)) {
-						end = true;
-					}
-				}
-				if (!end) {
+				if (data.containsKey(cst_no)) {
 					System.out.println("\nThis customer number is already registered");
+				} else {
+					// If the customer number is not found in data, you can proceed with account creation
+					end = true;
 				}
+
 			} catch (InputMismatchException e) {
 				System.out.println("\nInvalid Choice.");
 				menuInput.next();
@@ -182,12 +179,14 @@ public class OptionMenu {
 	}
 
 	public void mainMenu() throws IOException {
-		data.put(952141, new Account(952141, 191904, 1000, 5000));
-		data.put(123, new Account(123, 123, 20000, 50000));
+//		data.put(952141, new Account(952141, 191904, 1000, 5000));
+//		data.put(123, new Account(123, 123, 20000, 50000));
 		boolean end = false;
 		while (!end) {
 			try {
-				System.out.println("\n Type 1 - Login");
+				if(!data.isEmpty()){
+					System.out.println("\n Type 1 - Login");
+				}
 				System.out.println(" Type 2 - Create Account");
 				System.out.print("\nChoice: ");
 				int choice = menuInput.nextInt();
